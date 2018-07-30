@@ -1,6 +1,6 @@
 {
   "name": "react-native-patch",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "This is the patcher for react-native init command so as to pass the metro bundler port while creating a react-native project",
   "main": "./src/cli.js",
   "engines": {
