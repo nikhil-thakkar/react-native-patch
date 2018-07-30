@@ -36,7 +36,7 @@ try {
     execSync(whichReactNative);
     const projectPath = path.join(process.cwd(), projectName);
     execSync(reactNativeInitCmd, { stdio: [0, 1, 2] });
-    patcher(path.resolve(projectPath), oldPort, program.port);
+    patcher(path.resolve(projectPath), oldPort, newPort);
 } catch (err) {
     log(warning(`React Native cli is not installed. 
     Please install it using:
