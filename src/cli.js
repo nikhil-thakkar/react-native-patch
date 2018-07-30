@@ -13,7 +13,7 @@ const whichReactNative = `${isWin ? 'where' : 'which'} react-native`
 let projectName, newPort;
 
 program
-    .version('0.1.3', '-v, --version')
+    .version('0.1.4', '-v, --version')
     .command('init <name>')
     .option('-p, --port [port]', 'Port number for metro bundler')
     .action(function (name, options) {
