@@ -1,0 +1,27 @@
+{
+  "name": "react-native-patch",
+  "version": "0.1.0",
+  "description": "This is the patcher for react-native init command so as to pass the metro bundler port while creating a react-native project",
+  "main": "./src/cli.js",
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "port",
+    "patcher"
+  ],
+  "author": "nikhil.thakkar1987@gmail.com",
+  "license": "MIT",
+  "bin": {
+    "react-native-patch": "./src/cli.js"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.16.0"
+  },
+  "devDependencies": {}
+}
