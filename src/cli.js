@@ -10,15 +10,16 @@ const isWin = /^win/i.test(require('os').platform())
 const oldPort = 8081;
 const whichReactNative = `${isWin ? 'where' : 'which'} react-native`
 
-let projectName;
+let projectName, newPort;
 
 program
-    .version('0.1.0', '-v --version')
+    .version('0.1.3', '-v, --version')
     .command('init <name>')
-    .action(function (name) {
+    .option('-p, --port [port]', 'Port number for metro bundler')
+    .action(function (name, options) {
         projectName = name;
-    })
-    .option('-p, --port [port]', 'Port number for metro bundler', 8088);
+        newPort = (options.port === true) ? 8088 : options.port
+    });
 
 program.parse(process.argv);
 
