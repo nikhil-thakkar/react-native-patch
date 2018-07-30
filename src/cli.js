@@ -10,23 +10,25 @@ const isWin = /^win/i.test(require('os').platform())
 const oldPort = 8081;
 const whichReactNative = `${isWin ? 'where' : 'which'} react-native`
 
-let cmdValue, projectName;
+let projectName;
 
 program
-    .version('0.1.0')
-    .arguments('<cmd> <name>')
-    .action(function (cmd, name) {
-        cmdValue = cmd;
+    .version('0.1.0', '-v --version')
+    .command('init <name>')
+    .action(function (name) {
         projectName = name;
     })
     .option('-p, --port [port]', 'Port number for metro bundler', 8088);
 
 program.parse(process.argv);
 
-if (typeof cmdValue === 'undefined') {
-    log(error('init command is required!'));
+if (typeof projectName === 'undefined') {
+    log(error('Project name is required!'));
+    log(`Sample usage:
+    react-native-patch init AwesomeProject -p 9090`)
     process.exit(1);
 }
+
 const reactNativeInitCmd = `react-native init ${projectName}`;
 
 try {
