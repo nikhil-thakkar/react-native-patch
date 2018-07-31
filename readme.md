@@ -1,17 +1,15 @@
 # React-Native-Patch CLI
-This CLI helps in removing the friction involved in configuring the metro bundler port, which is hard coded to 8081 in ract-native cli, may be blocked for some reasons on your machine.
+This CLI helps in removing the friction involved in configuring the metro bundler port, currently hard coded to __8081__ in react-native-cli, which may be blocked/in-use for some reasons on your machine.
 
 
 Though there are options available to overcome this for e.g react-native-port-patcher, but still require extra effort as a developer.
 
 ## Pre-requisites
     Requires React Native CLI to be installed.
+    (npm install -g react-native-cli)
 
 ## Install
     npm install -g react-native-patch
-
-## Usage
-    
 
 ## Sample Usage
     react-native-patch init AwesomeProject -p 9099
@@ -20,6 +18,9 @@ Though there are options available to overcome this for e.g react-native-port-pa
 [@ktonon](https://github.com/ktonon) for writing react-native-port-patcher. 
 
 I shamelessly copied the logic to replace the hard coded port with the new one.
+
+## Limiations
+    Only tested on Mac.
 
 ## License
     The MIT License (MIT)
