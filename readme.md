@@ -11,8 +11,24 @@ Though there are options available to overcome this for e.g react-native-port-pa
 ## Install
     npm install -g react-native-patch
 
+## Alias
+You can use an alias for the react-native-patch command as __rnp__ :tada:.
+
+    rnp init AwesomeProject -p 9099
+
 ## Sample Usage
-    react-native-patch init AwesomeProject -p 9099
+    rnp init AwesomeProject -p 9099
+
+## Typscript Support
+If you want to generate/create the project using typescript as the language then pass -t as an option.
+
+    rnp init AwesomeProject -p 9099 -t
+## Patch
+If you already have a project and just want to patch the metro bundler port number use:
+
+    rnp patch -o 8081 -n 9000
+Remember -o defaults __8081__ if not provided. To run this command make sure you are at the root of your react native project.
+
 
 ## Credits
 [@ktonon](https://github.com/ktonon) for writing react-native-port-patcher. 
