@@ -17,7 +17,8 @@
   "author": "nikhil.thakkar1987@gmail.com",
   "license": "MIT",
   "bin": {
-    "react-native-patch": "./src/cli.js"
+    "react-native-patch": "./src/cli.js",
+    "rnp": "./src/cli.js"
   },
   "dependencies": {
     "chalk": "^2.4.1",
