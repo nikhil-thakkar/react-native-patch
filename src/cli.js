@@ -47,7 +47,7 @@ function freshProject(projectName, newPort, template) {
         execSync(whichReactNative)
         const projectPath = path.join(process.cwd(), projectName)
         execSync(reactNativeInitCmd, { stdio: [0, 1, 2] })
-        patcher(path.resolve(projectPath), oldPort, newPort)
+        patcher(path.resolve(projectPath), harcodedPort, newPort)
     } catch (err) {
         log(warning(`React Native cli is not installed. 
         Please install it using:
