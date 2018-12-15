@@ -12,7 +12,7 @@ const whichReactNative = `${isWin ? 'where' : 'which'} react-native`
 const folderTestCmd = '/node_modules/react-native/local-cli'
 
 program
-    .version('0.1.9', '-v, --version')
+    .version('0.2.0', '-v, --version')
     .command('init <name>')
     .option('-p, --port [port]', 'Port number for metro bundler')
     .option('-t, --template', 'Generate the source code in typescript')
@@ -47,7 +47,7 @@ function freshProject(projectName, newPort, template) {
         execSync(whichReactNative)
         const projectPath = path.join(process.cwd(), projectName)
         execSync(reactNativeInitCmd, { stdio: [0, 1, 2] })
-        patcher(path.resolve(projectPath), oldPort, newPort)
+        patcher(path.resolve(projectPath), harcodedPort, newPort)
     } catch (err) {
         log(warning(`React Native cli is not installed. 
         Please install it using:
