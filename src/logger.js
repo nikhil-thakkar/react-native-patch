@@ -5,7 +5,7 @@ const error = chalk.bold.red
 const warning = chalk.keyword('orange')
 
 module.exports = {
-    log,
-    error,
-    warning
+  log,
+  error,
+  warning
 }
