@@ -35,7 +35,7 @@ Remember -o defaults __8081__ if not provided. To run this command make sure you
 
 I shamelessly copied the logic to replace the hard coded port with the new one.
 
-## Limiations
+## Limitations
     Only tested on Mac.
 
 ## License
